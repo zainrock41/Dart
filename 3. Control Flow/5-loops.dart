@@ -20,29 +20,31 @@ for (initialization; condition; increment/decrement) {
 */
 
 void main() {
-  for (int i = 1; i <= 5; i++) {
-    print(i);
-  }
 
-  for (int i = 1; i <= 5; i++) {
-    if (i == 3) {
-      break; // Stops the loop when i == 3
-    }
-    print(i);
-  }
+  // for (int i = 1; i <= 5; i++) {
+  //   print(i);
+  // }
+
+  // for (int i = 1; i <= 5; i++) {
+  //   if (i == 3) {
+  //     break; // Stops the loop when i == 3
+  //   }
+  //   print(i);
+  // }
 
 // Infinite For Loop
-  for (int i = 1; i > 0; i++) // i is always increasing
-  { 
-    print(i);
-  }
 
-  for (int i = 1; i <= 5; i++) {
-    if (i == 3) {
-      continue; // Skips 3
-    }
-    print(i);
-  }
+  // for (int i = 1; i > 0; i++) // i is always increasing
+  // { 
+  //   print(i);
+  // }
+
+  // for (int i = 1; i <= 5; i++) {
+  //   if (i == 3) {
+  //     continue; // Skips 3
+  //   }
+  //   print(i);
+  // }
 
 
 // 2️⃣ While Loop
@@ -52,11 +54,11 @@ while (condition) {
 }
 */
 
-  int i = 1;
-  while (i <= 5) {
-    print(i);
-    i++; // Increment to avoid infinite loop
-  }
+  // int i = 1;
+  // while (i <= 5) {
+  //   print(i);
+  //   i++; // Increment to avoid infinite loop
+  // }
 
 
 // 3️⃣ Do-While Loop
@@ -66,28 +68,42 @@ do {
 } while (condition);
 */
 
-  int i = 1;
-  do {
-    print(i);
-    i++;
-  } while (i <= 5);
+  // int i = 1;
+  // do {
+  //   print(i);
+  //   i++;
+  // } while (i <= 5);
 
 
 // 4️⃣ For-In Loop (Lists)
 
-  List<String> fruits = ["Apple", "Banana", "Cherry"];
+//   List<String> fruits = ["Apple", "Banana", "Cherry"];
   
-  for (String fruit in fruits) {
-    print(fruit);
-}
+//   for (String fruit in fruits) {
+//     print(fruit);
+// }
 
 // 5️⃣ forEach Loop (Lists)
 
-  List<int> numbers = [10, 20, 30];
+  // List<int> numbers = [10, 20, 30];
   
-  numbers.forEach((num) {
-    print(num);
+  // numbers.forEach((num) {
+  //   print(num);
+  // });
+
+  List people = ['Ahmad', 'Ahsan', 'Akbar'];
+  print(people);
+
+  // for (int i = 0; i < people.length; i++) {
+
+  //   print('Person ${i} is ${[people[i]]}');
+
+  // }
+
+  people.forEach((person) {
+    print(person);
   });
+
 
 }
 
