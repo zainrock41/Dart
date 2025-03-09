@@ -78,3 +78,55 @@ Otherwise, print "Incorrect Password!".
 If the username is incorrect, print "User not found!".
 
 */
+
+
+import 'dart:io';
+
+void main() {
+  // 1️⃣ Temperature Check (if-else)
+  stdout.write("Enter the temperature: ");
+  int temp = int.parse(stdin.readLineSync()!);
+  if (temp >= 30) {
+    print("It's a hot day!");
+  } else {
+    print("The weather is pleasant.");
+  }
+
+  // 2️⃣ Age Group (else-if)
+  stdout.write("Enter your age: ");
+  int age = int.parse(stdin.readLineSync()!);
+  if (age < 12) {
+    print("Child");
+  } else if (age >= 12 && age < 18) {
+    print("Teenager");
+  } else if (age >= 18 && age < 60) {
+    print("Adult");
+  } else {
+    print("Senior Citizen");
+  }
+
+  // 3️⃣ Even or Odd (if-else)
+  stdout.write("Enter a number: ");
+  int num = int.parse(stdin.readLineSync()!);
+  if (num % 2 == 0) {
+    print("$num is Even.");
+  } else {
+    print("$num is Odd.");
+  }
+
+  // 4️⃣ Nested If-Else: Login System
+  stdout.write("Enter username: ");
+  String username = stdin.readLineSync()!;
+
+  if (username == "admin") {
+    stdout.write("Enter password: ");
+    String password = stdin.readLineSync()!;
+    if (password == "1234") {
+      print("Login Successful!");
+    } else {
+      print("Incorrect Password!");
+    }
+  } else {
+    print("User not found!");
+  }
+}
