@@ -113,5 +113,37 @@ do {
 2. Create an infinite while loop that prints "Still Running..." and stops after 10 iterations.
 3. Write an infinite do-while loop that asks the user to enter a number. If the number is 0, break the loop.
 */
+import 'dart:io';
 
+void main() {
+  // 1. Infinite for loop with break condition
+  int num = 0;
+  for (;;) {
+    num++;
+    if (num == 100) {
+      print("Loop stopped at 100");
+      break;
+    }
+  }
+
+  // 2. Infinite while loop stopping after 10 iterations
+  int counter = 0;
+  while (true) {
+    print("Still Running...");
+    counter++;
+    if (counter == 10) {
+      print("Loop stopped after 10 iterations");
+      break;
+    }
+  }
+
+  // 3. Infinite do-while loop that stops when user enters 0
+  int userInput;
+  do {
+    stdout.write("Enter a number (0 to stop): ");
+    userInput = int.parse(stdin.readLineSync()!);
+  } while (userInput != 0);
+
+  print("Loop stopped as user entered 0.");
+}
 
