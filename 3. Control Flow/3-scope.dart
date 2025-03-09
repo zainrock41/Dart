@@ -81,3 +81,53 @@ Create a function inside another function.
 The inner function should access a variable from the outer function and print it.
 
 */
+
+
+import 'dart:io';
+
+// 1️⃣ Global Scope
+String appName = "My Dart App";
+
+void functionOne() {
+  print("Function One - App Name: $appName");
+}
+
+void functionTwo() {
+  print("Function Two - App Name: $appName");
+}
+
+void main() {
+  functionOne();
+  functionTwo();
+
+  // 2️⃣ Local Scope (Function Scope)
+  void showMessage() {
+    String message = "Hello from showMessage function!";
+    print(message); // ✅ Accessible here
+  }
+
+  showMessage();
+  // print(message); ❌ This would cause an error as 'message' is local to showMessage()
+
+  // 3️⃣ Block Scope
+  int count = 10;
+  if (count > 5) {
+    String blockVar = "Inside if block";
+    print("Count: $count");
+    print(blockVar); // ✅ Accessible here
+  }
+  // print(blockVar); ❌ This would cause an error as 'blockVar' is block-scoped
+
+  // 4️⃣ Lexical Scope (Nested Scope)
+  void outerFunction() {
+    String outerVar = "I'm in outerFunction";
+    
+    void innerFunction() {
+      print(outerVar); // ✅ Accessible due to lexical scope
+    }
+    
+    innerFunction();
+  }
+  
+  outerFunction();
+}
