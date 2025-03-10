@@ -16,7 +16,6 @@ switch (expression) {
 */
 
 void main() {
-    void main() {
   String day = "Wednesday";
 
   switch (day) {

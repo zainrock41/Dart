@@ -1,7 +1,3 @@
-// Dart's assert statement is used for debugging purposes. 
-// It helps you check if a condition is true during development.
-// If the condition is false, the program throws an error.
-// Assertions only work in debug mode. They are ignored in production (release mode).
 
 void main() {
 
@@ -22,7 +18,6 @@ void main() {
 
 // else if
   int marks = 85;
-
   if (marks >= 90) {
     print("Grade: A+");
   } else if (marks >= 80) {

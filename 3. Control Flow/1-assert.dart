@@ -5,8 +5,8 @@
 
 void main() {
     
-  int age = 15;
-  assert(age >= 18, "Age must be 18 or above");
-  print("You are allowed.");
+  int age = 5;
+  assert(age >= 18, "You are allowed.");
+  print("Age must be 18 or above");
      
 }
