@@ -1,9 +1,8 @@
 
-
 void main() {
     sayHello();
-    int sum = calculateArea(10,5);
-    print(sum);
+    int area = calculateArea(10, 5);
+    print(area);
 
 }
 
