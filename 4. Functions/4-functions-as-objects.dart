@@ -4,25 +4,25 @@
 // They can be returned from functions.
 // They can be stored in data structures like lists or maps.
 
-
-
 // 1️⃣ Store a Function in a Variable
 
-// int add(int a, int b) {
-//   return a + b;
-// }
+void main(){
+  var myVar = add;
+  print(myVar(3, 4));
+  var greet = getGreeting();  
+  greet();
 
-// void main() {
-   
-//   var myVar = add;
-//   print(myVar(3, 4));
+}
 
-// }
+int add(int a, int b) {
+  return a + b;
+}
+
 
 // 2️⃣ Pass a Function as an Argument
 
 // void calculate(int a, int b, Function operation) {
-//   print(operation(a, b)); // Calls the function and prints the result
+//   print(operation(a, b));
 // }
 
 // int add(int x, int y) {
@@ -36,14 +36,9 @@
 
 // 3️⃣ Returning a Function from Another Function
 
-// Function getGreeting() {
-//   return () => print("Welcome to Dart!"); // anonymous function
-// }
-
-// void main() {
-//   var greet = getGreeting();  
-//   greet(); 
-// }
+Function getGreeting() {
+  return () => print("Welcome to Dart!"); // Anonymous Function
+}
 
 // 4️⃣ Store Functions in a List
 

@@ -5,8 +5,8 @@ void greet(String name) {
 }
 
 void greet1(String? name) { 
-    /* ?? (Null-Coalescing Operator) */
-    print("Hello, ${name ?? 'Guest'}!"); // ✅ Uses 'Guest' if null
+    // print("Hello, $name!");      
+    print("Hello, ${name ?? 'Guest'}!"); /* ?? (Null-Coalescing Operator) */
 }
 
 void main() {
@@ -14,7 +14,7 @@ void main() {
     // greet(null); // ❌ Error: null value not allowed
     greet1(null); // ✅ Works fine 
     
-    greet1("Ali");  // Output: Hello, Ali!
+    // greet1("Ali");  // Output: Hello, Ali!
 
 }
 
