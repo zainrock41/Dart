@@ -5,13 +5,13 @@ void main() {
     // sayHello();
     // sayHello('Ahmad');
     
-    download('myfile.text');
-    download('myfile2.text', true);
+    // download('myfile.text');
+    // download('myfile2.text', true);
 
 
-    printNumbers([1, 2, 3, 4, 5]); // ✅ Works like *args
-    print('\n');
-    printData(["Ahmad", 25, true, 3.14]); // ✅ Works with mixed data types
+    // printNumbers([1, 2, 3, 4, 5]); // ✅ Works like *args
+    // print('\n');
+    // printData(["Ahmad", 25, true, 3.14]); // ✅ Works with mixed data types
 
 }
 
