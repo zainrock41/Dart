@@ -1,35 +1,34 @@
 
 
 void main() {
-    // sayHello('Jamil');
-    // sayHello();
-    // sayHello('Ahmad');
+    sayHello('Jamil');
+    sayHello1();
+    sayHello1('Jamil');
+    sayHello2('Ahmad');
     
     download('myfile.text');
     download('myfile2.text', true);
 
 
-    printNumbers([1, 2, 3, 4, 5]); // ✅ Works like *args
+    printNumbers([1, 2, 3, 4, 5, 6, 7, 8, 9, 10]); // ✅ Works like *args
+    print('\n');
     print('\n');
     printData(["Ahmad", 25, true, 3.14]); // ✅ Works with mixed data types
-
 }
 
-// void sayHello(String name){
-//     print("Hello ${name}");
-// }
+void sayHello(String name){
+    print("Hello ${name}");
+}
 
+// Function with Default Parameter
+void sayHello1([String name = 'Guest']){
+    print("Hello ${name}");
+}
 
-// void sayHello([String name = '']){
-//     print("Hello ${name}");
-// }
-
-// void sayHello([String name = '']){
-
-//     if(name.isNotEmpty) name = name.padLeft(name.length + 1);
-//     print("Hello${name}");
-
-// }
+void sayHello2([String name = '']){
+    if(name.isNotEmpty) name = name.padLeft(name.length + 1);
+    print("Hello${name}");
+}
 
 void download(String file, [bool open = false]){
     print('Downloading ${file}');
@@ -41,8 +40,8 @@ void download(String file, [bool open = false]){
 }
 
 void printNumbers(List<int> numbers) {
-  for (var num in numbers) {
-    print(num);
+  for (int number in numbers) {
+    print(number);
   }
 }
 
