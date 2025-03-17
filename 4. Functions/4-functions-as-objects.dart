@@ -21,17 +21,17 @@ int add(int a, int b) {
 
 // 2️⃣ Pass a Function as an Argument
 
-// void calculate(int a, int b, Function operation) {
-//   print(operation(a, b));
-// }
+void calculate(int a, int b, Function operation) {
+  print(operation(a, b));
+}
 
-// int add(int x, int y) {
-//   return x + y;
-// }
+int add(int x, int y) {
+  return x + y;
+}
 
-// void main() {
-//   calculate(10, 5, add);  
-// }
+void main() {
+  calculate(10, 5, add);  
+}
 
 
 // 3️⃣ Returning a Function from Another Function
