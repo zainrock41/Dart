@@ -57,3 +57,35 @@ void printData(List<dynamic> args) {
 // Write a function sumAll() that takes multiple numbers as a list and returns their sum.
 // Write a function printWords() that takes a list of words and prints each word in uppercase.
 // Write a function describeItems() that takes multiple mixed data types (string, int, bool) and prints each item with its type.
+
+void main() {
+  // Example usage
+  print(sumAll([1, 2, 3, 4, 5]));
+
+  printWords(['hello', 'world', 'dart']);
+
+  describeItems(['apple', 42, true, 'dart', false]);
+}
+
+// Function to sum all numbers in a list
+int sumAll(List<int> numbers) {
+  int sum = 0;
+  for (var num in numbers) {
+    sum += num;
+  }
+  return sum;
+}
+
+// Function to print each word in uppercase
+void printWords(List<String> words) {
+  for (var word in words) {
+    print(word.toUpperCase());
+  }
+}
+
+// Function to print each item with its type
+void describeItems(List items) {
+  for (var item in items) {
+    print('$item is of type ${item.runtimeType}');
+  }
+}
